@@ -23,7 +23,7 @@ option(CMAKE_BUILD_TYPE "Build type " Release)
 # Set the option to enable code using a performance timer
 option(NODESETEXPORTER_PERFORMANCE_TIMER_ENABLED "Add performance timer code" OFF)
 # (optional) Use the Conan package manager to download, build, and install dependencies for specific versions.
-option(NODESETEXPORTER_CONAN_ENABLE "Use Conan package manager for resolving project dependencies" ON)
+option(NODESETEXPORTER_CONAN_ENABLE "Use Conan package manager for resolving project dependencies" OFF)
 # This option allows you to disable the build of tests from the default build.
 option(NODESETEXPORTER_BUILD_TESTS "Include tests in build" OFF)
 # This option allows you to create a command utility that can export a set of nodes from the OPC UA Server node space.
