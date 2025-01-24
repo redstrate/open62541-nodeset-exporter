@@ -55,5 +55,5 @@ target_link_libraries(
 # Install cli_nodesetexporter utility application
 install(TARGETS ${PROJECT_NAME} RUNTIME COMPONENT Runtime)
 
-nodesetexporter_clang_format_setup(${PROJECT_NAME})
-nodesetexporter_clang_format_setup(${PROJECT_NAME}-static)
+#nodesetexporter_clang_format_setup(${PROJECT_NAME})
+#nodesetexporter_clang_format_setup(${PROJECT_NAME}-static)
