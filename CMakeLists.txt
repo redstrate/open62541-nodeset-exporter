@@ -34,7 +34,7 @@ option(NODESETEXPORTER_OPEN62541_IS_SUBMODULE "Switch ON this if Open62541 is in
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
 
 set(OPEN62541_VERSIONS "v1.3.x" "v1.4.x")
-set(OPEN62541_VERSION "v1.3.x" CACHE STRING "What version of the Open62541 library are you using?")
+set(OPEN62541_VERSION "v1.4.x" CACHE STRING "What version of the Open62541 library are you using?")
 SET_PROPERTY(CACHE OPEN62541_VERSION PROPERTY STRINGS "v1.3.x" ${OPEN62541_VERSIONS})
 if ("${OPEN62541_VERSION}" STREQUAL "v1.4.x")
     add_compile_definitions(OPEN62541_VER_1_4)
