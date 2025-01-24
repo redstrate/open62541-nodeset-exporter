@@ -27,7 +27,7 @@ option(NODESETEXPORTER_CONAN_ENABLE "Use Conan package manager for resolving pro
 # This option allows you to disable the build of tests from the default build.
 option(NODESETEXPORTER_BUILD_TESTS "Include tests in build" OFF)
 # This option allows you to create a command utility that can export a set of nodes from the OPC UA Server node space.
-option(NODESETEXPORTER_CLI_ENABLE "Add nodesetexporter command utility to build" OFF)
+option(NODESETEXPORTER_CLI_ENABLE "Add nodesetexporter command utility to build" ON)
 # If you want to add the open62541 library as a static submodule.
 option(NODESETEXPORTER_OPEN62541_IS_SUBMODULE "Switch ON this if Open62541 is included as a submodule (built-in) as a static library" OFF)
 # If present and true, this will cause all libraries to be built shared unless the library was explicitly added as a static library.
