@@ -116,7 +116,7 @@ struct formatter<build::Compiler> // NOLINT(readability-identifier-naming)
     }
 
     template <typename FormatContext>
-    auto format(build::Compiler const& compiler, FormatContext& ctx) // NOLINT(readability-identifier-naming)
+    auto format(build::Compiler const& compiler, FormatContext& ctx) const // NOLINT(readability-identifier-naming)
     {
         return format_to(ctx.out(), "{} {}", compiler.name, compiler.version);
     }
@@ -137,7 +137,7 @@ struct formatter<build::Version> // NOLINT(readability-identifier-naming)
     }
 
     template <typename FormatContext>
-    auto format(build::Version const& version, FormatContext& ctx) // NOLINT(readability-identifier-naming)
+    auto format(build::Version const& version, FormatContext& ctx) const // NOLINT(readability-identifier-naming)
     {
 #ifdef PROJECT_VERSION_SUFFIX
         return format_to(ctx.out(), "{}.{}.{}-{}", version.major, version.minor, version.patch, version.suffix);
