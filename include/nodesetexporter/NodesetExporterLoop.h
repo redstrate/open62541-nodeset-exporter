@@ -26,6 +26,7 @@
 #include <optional>
 #include <set>
 #include <variant>
+#include <memory>
 
 namespace nodesetexporter
 {
