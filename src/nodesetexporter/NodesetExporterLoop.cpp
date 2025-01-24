@@ -451,7 +451,7 @@ StatusResults NodesetExporterLoop::GetNodesData(
         for (size_t index = range_for_nodes.first; index < range_for_nodes.second; ++index)
         {
             // To avoid constantly executing the loop and ToString before sending it to Debug, check the logging level in advance.
-            m_logger.Debug("Node export (ext_node_ids). Before filter : {}, class: {}", node_ids[index].ToString(), node_classes_req_res[index].node_class);
+            m_logger.Debug("Node export (ext_node_ids). Before filter : {}, class: {}", node_ids[index].ToString(), (int)node_classes_req_res[index].node_class);
         }
         m_logger.Debug("Total nodes: {}", range_for_nodes.second - range_for_nodes.first);
     }
@@ -592,7 +592,7 @@ StatusResults NodesetExporterLoop::ExportNodes(const std::vector<NodeIntermediat
     {
         if (m_logger.IsEnable(common::LogLevel::Debug))
         {
-            m_logger.Debug("Node: {}, node class: {}", node_model.GetExpNodeId().ToString(), node_model.GetNodeClass());
+            m_logger.Debug("Node: {}, node class: {}", node_model.GetExpNodeId().ToString(), (int)node_model.GetNodeClass());
         }
 
         switch (node_model.GetNodeClass())
@@ -622,7 +622,7 @@ StatusResults NodesetExporterLoop::ExportNodes(const std::vector<NodeIntermediat
             ++m_exported_nodes.datatype_nodes;
             break;
         default:
-            m_logger.Warning("NODECLASS with define {} not undefined", node_model.GetNodeClass());
+            m_logger.Warning("NODECLASS with define {} not undefined", (int)node_model.GetNodeClass());
         }
         if (status_result == StatusResults::Fail)
         {
